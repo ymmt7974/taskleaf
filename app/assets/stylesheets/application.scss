@@ -1,0 +1,30 @@
+// @import "bootstrap-sprockets";
+@import "bootstrap";
+
+// @font-face {
+// 	font-family: 'MyFont';
+// 	src: url(/assets/font/Pigmo-00.otf) format('opentype');
+// }
+
+// body {
+// 	font-family: 'M PLUS Rounded 1c', sans-serif;
+// }
+.btn {
+  margin: 10px;
+}
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: green;
+  // text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 1px;
+  font-weight: bold;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
