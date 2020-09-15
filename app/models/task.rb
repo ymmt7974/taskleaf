@@ -5,9 +5,16 @@ class Task < ApplicationRecord
   validates :name, length: { maximum: 30 }
   validate :validate_name_not_including_comma
 
+  # -- 関連（Association） --
+  belongs_to :user
+
+  # -- scope --
+  # 最新を取得
+  scope :recent, -> { order(created_at: :desc)}
+
   private
 
-  # [before]
+  # -- [validation] --
   # 名称：空白の場合、「（名前なし）」を設定
   def set_nameless_name
     self.name = '（名前なし）' if name.blank?

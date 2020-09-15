@@ -1,22 +1,38 @@
 ---
 ja:
-  activerecord:
-    errors:
-      messages:
-        record_invalid: 'バリデーションに失敗しました: %{errors}'
-        restrict_dependent_destroy:
-          has_one: "%{record}が存在しているので削除できません"
-          has_many: "%{record}が存在しているので削除できません"
-    # モデル
-    models:
-      task: タスク
-    attributes:
-      task:
-        id: ID
-        name: 名称
-        description: 詳細
-        created_at: 登録日時
-        updated_at: 更新日時
+  # activerecord:
+  #   errors:
+  #     messages:
+  #       record_invalid: 'バリデーションに失敗しました: %{errors}'
+  #       restrict_dependent_destroy:
+  #         has_one: "%{record}が存在しているので削除できません"
+  #         has_many: "%{record}が存在しているので削除できません"
+  #   # モデル
+  #   models:
+  #     task: タスク
+  #     user: ユーザー
+  #   attributes:
+  #     task:
+  #       id: ID
+  #       name: 名称
+  #       description: 詳細
+  #       created_at: 登録日時
+  #       updated_at: 更新日時
+  #     user:
+  #       id: ID
+  #       name: 名前
+  #       email: メールアドレス
+  #       admin: 管理者権限
+  #       password: パスワード
+  #       password_confirmation: パスワード（確認）
+  #       created_at: 登録日時
+  #       updated_at: 更新日時
+
+  # scope:
+  #   session:
+  #     email: メールアドレス
+  #     password: パスワード
+
   # ページネーション
   will_paginate:
     previous_label: 前
@@ -149,6 +165,7 @@ ja:
       too_long: は%{count}文字以内で入力してください
       too_short: は%{count}文字以上で入力してください
       wrong_length: は%{count}文字で入力してください
+      login_email_password: メール/パスワードの組み合わせが無効です。
     template:
       body: 次の項目を確認してください
       header:
